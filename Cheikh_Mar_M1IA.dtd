@@ -1,0 +1,26 @@
+<!ELEMENT cours (description,enseignements,info)>
+
+<!-- Bloc description -->
+<!ELEMENT description (Icours,UE,ChTravail(credit,coef,Vhoraire),semetre,niveau,prerequis)>
+<!ELEMENT Icours (#PCDATA)>
+<!ELEMENT UE (#PCDATA)>
+<!ELEMENT ChTravail (#PCDATA)>
+<!ELEMENT Semetre (#PCDATA)>
+<!ELEMENT Niveau (#PCDATA)>
+<!ELEMENT Prerequis (#PCDATA)>
+<!ATTLIST Description type CDATA  #REQUIRED>
+
+<!-- Bloc enseignement -->
+<!ELEMENT enseignements (enseignement)>
+<!ELEMENT enseignement (prenom,nom,ABureau,courriel)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT ABureau (#PCDATA)>
+<!ELEMENT courriel (#PCDATA)>
+<!ATTLIST enseignement type CDATA  #REQUIRED>
+
+<!-- Bloc info -->
+<!ELEMENT infos (salle,heureD, heurF)>
+<!ELEMENT salle (#PCDATA)>
+<!ELEMENT heurD (#PCDATA)>
+<!ELEMENT heurF (#PCDATA)>

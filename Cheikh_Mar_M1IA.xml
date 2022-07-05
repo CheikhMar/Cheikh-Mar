@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE syllabus SYSTEM "Cheikh_Mar.dtd">
+
+    <syllabus>
+        <!-- Élément mere cours-->
+        <cours>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->            
+            <!-- Description du Cours -->
+            <Description>
+        
+                <Icours>SI</Icours>
+                <UE>INF413</UE>
+                <ChTtavail>
+                    <credits>6</credits>
+                    <Coef>2</Coef>
+                    <Vhoraire>60</Vhoraire>
+                </ChTtavail>
+                <Semestre>semestre 1</Semestre>
+                <Niveau>Master 1</Niveau>
+                <Prerequis>ordi</Prerequis>     
+            </Description>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->            
+             <!-- Renseignement -->
+            <enseignements>
+                <enseignement>
+                    <prenom>Francois </prenom>
+                    <nom>KALY</nom>
+                    <ABureau>UFR_SET</ABureau>
+                    <courriel>f.kaly@univ-thie.sn</courriel>   
+                </enseignement>
+            </enseignements>
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->            
+             <!-- Information lieu et heur -->
+             <infos>
+                <salle>Salle5</salle>
+                <heureD>09</heureD>
+                <heureF>12</heureF>
+             </infos>
+
+            
+        </cours>
+        
+    </syllabus>
+

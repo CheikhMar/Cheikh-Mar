@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema xmlns="">
+
+<xsd:simpleType name="chaine">
+	<xsd:restriction base="xsd:String">
+		<xsd:maxLength value="100"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="valeur">
+	<xsd:restriction base="xsd:int"> </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:element name= "Description">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="Icours" type = "chaine"/>
+			<xsd:element name="UE" type = "chaine"/>
+			<xsd:element name= "ChTravail">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="credits" type = "valeur"/>
+                        <xsd:element name="Coef" type = "valeur"/>
+                        <xsd:element name="Vhoraire" type = "chaine"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+               <xsd:element name="Semestre" type = "chaine"/>
+                <xsd:element name="Niveau" type = "chaine"/>
+               <xsd:element name="Prerequis" type = "chaine"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+<!--xsd:element name= "enseignements"-->
+ <xsd:complexType name="enseignement">
+ </xsd:complexType>
+<xsd:element name= "enseignement" maxOccurs="unbounded">
+	<xsd:complexType>
+
+		<xsd:sequence>
+			<xsd:element name="enseignement" type = "enseignement" maxOccurs="unbounded"/>
+			<xsd:element name="prenom" type = "chaine"/>
+			<xsd:element name="nom" type = "xsd:date"/>
+            <xsd:element name="ABureau" type = "chaine"/>
+			<xsd:element name="courriel" type = "chaine"/>
+
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name= "info">
+  <xsd:complexType>
+     <xsd:sequence>
+        <xsd:element name="salle" type = "chaine"/>
+        <xsd:element name="heureD" type = "xsd:time"/>
+        <xsd:element name="heureF" type = "xsd:time"/>
+      </xsd:sequence>
+  </xsd:complexType>
+ </xsd:element>
+<xsd:element name= "Cours">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="Description" type = "Description"/>
+            <xsd:element name="enseignement" type = "Enseignement"/>
+            <xsd:element name="lieuHoraire" type = "LieuHoraire"/>
+        </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:complexType name="Syllabus">
+    <xsd:sequence>
+     <xsd:element name="cours" type = "Cours"> </xsd:element>
+    </xsd:sequencet>
+</xsd:complexType>
+
+ </xsd:schema>
+
